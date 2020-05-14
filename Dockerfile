@@ -11,6 +11,8 @@ ENV PYTHONDONTWRITEBYTECODE 1
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED 1
 
+EXPOSE 8000
+
 # Install pip requirements
 ARG REQUIREMENTS=requirements.txt
 COPY requirements.txt dev_requirements.txt /app/
@@ -18,5 +20,3 @@ COPY requirements.txt dev_requirements.txt /app/
 RUN pip install -r $REQUIREMENTS --disable-pip-version-check
 
 ADD . /app
-
-EXPOSE 8000

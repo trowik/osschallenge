@@ -4,7 +4,7 @@ addons:
     chrome: stable
 
 python:
-    - "2.7.12"
+    - "3.6"
 
 services:
     - postgresql
