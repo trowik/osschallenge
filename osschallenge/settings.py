@@ -185,3 +185,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "osschallenge/static")
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "osschallenge/pictures")
 MEDIA_URL = '/media/'
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+CSRF_COOKIE_SECURE = env.bool("CSRF_COOKIE_SECURE", default=True)
+SESSION_COOKIE_SECURE = env.bool("SESSION_COOKIE_SECURE", default=True)
